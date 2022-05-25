@@ -59,6 +59,12 @@ const input = document.querySelector('.input');
 
 const btn = document.querySelector('.boton');
 
+const formulario = document.getElementById("formulario");
+
+formulario.addEventListener('submit', e =>{
+  e.preventDefault()
+})
+
 btn.addEventListener('click', capturarValor);
 
 function capturarValor(){
@@ -73,7 +79,7 @@ function capturarValor(){
   nombrePizza.textContent = `Pizza de ${Pizzas[valor].nombre}`;
   precioPizza.textContent = `Precio: $${Pizzas[valor].precio}`;
   } else {
-    nombrePizza.textContent = `No hay pizzas disponibles para el número ingresado`
+    nombrePizza.textContent = `No hay pizzas disponibles para el número ingresado`;
     precioPizza.textContent = "";
   }
 
