@@ -52,13 +52,14 @@ button {
 }
 
 h1 {
+    padding-top: 5%;
     color: white;
     text-shadow: 2px 1.5px 3px black;
 }
 
 h2 {
     padding: 4%;
-    font-size: 24px;
+    font-size: 26px;
     color: white;
     max-width: 300px;
     text-align: center;
