@@ -48,10 +48,11 @@ const Pizzas = [
     }
 ];
 
-
 const nombrePizza = document.getElementById("nombrePizza");
 
 const precioPizza = document.getElementById("precioPizza");
+
+const ingredientesPizza = document.getElementById("ingredientesPizza");
 
 const button = document.getElementById("button");
 
@@ -74,22 +75,28 @@ function capturarValor(){
   if (valor != "") {
 
     if(valor == 1){
-      nombrePizza.textContent = `Pizza ${Pizzas[valor].nombre}`;
-      precioPizza.textContent = `Precio: $${Pizzas[valor].precio}`;
+      nombrePizza.textContent = `Pizza ${Pizzas[valor].nombre}.`;
+      ingredientesPizza.textContent = `Ingredientes: ${Pizzas[valor].ingredientes.join(", " )}.`;
+      precioPizza.textContent = `Precio: $${Pizzas[valor].precio}.`;
   
     } else if(valor < Pizzas.length && valor >= 0 && valor !=1){
-      nombrePizza.textContent = `Pizza de ${Pizzas[valor].nombre}`;
-      precioPizza.textContent = `Precio: $${Pizzas[valor].precio}`;
+      nombrePizza.textContent = `Pizza de ${Pizzas[valor].nombre}.`;
+      ingredientesPizza.textContent = `Ingredientes: ${Pizzas[valor].ingredientes.join(", " )}.`;
+      precioPizza.textContent = `Precio: $${Pizzas[valor].precio}.`;
   
     } else {
-      nombrePizza.textContent = `No hay pizzas disponibles para el número ingresado`;
+      nombrePizza.textContent = `No hay pizzas disponibles para el número 
+      ingresado.`;
+      ingredientesPizza.textContent = "";
       precioPizza.textContent = "";
     }
 
   } else {
-    nombrePizza.textContent = `Ingrese un número para comenzar la búsqueda`;
+    nombrePizza.textContent = `Ingrese un número para comenzar la búsqueda.`;
+    ingredientesPizza.textContent = "";
     precioPizza.textContent = "";
   }
 }
+
 
 
