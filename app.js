@@ -71,18 +71,25 @@ function capturarValor(){
 
   let valor = input.value;
 
-  if(valor == 1){
-    nombrePizza.textContent = `Pizza ${Pizzas[valor].nombre}`;
-    precioPizza.textContent = `Precio: $${Pizzas[valor].precio}`;
+  if (valor != "") {
 
-  } else if(valor < Pizzas.length && valor >= 0 && valor !=1){
-  nombrePizza.textContent = `Pizza de ${Pizzas[valor].nombre}`;
-  precioPizza.textContent = `Precio: $${Pizzas[valor].precio}`;
+    if(valor == 1){
+      nombrePizza.textContent = `Pizza ${Pizzas[valor].nombre}`;
+      precioPizza.textContent = `Precio: $${Pizzas[valor].precio}`;
+  
+    } else if(valor < Pizzas.length && valor >= 0 && valor !=1){
+      nombrePizza.textContent = `Pizza de ${Pizzas[valor].nombre}`;
+      precioPizza.textContent = `Precio: $${Pizzas[valor].precio}`;
+  
+    } else {
+      nombrePizza.textContent = `No hay pizzas disponibles para el número ingresado`;
+      precioPizza.textContent = "";
+    }
+
   } else {
-    nombrePizza.textContent = `No hay pizzas disponibles para el número ingresado`;
+    nombrePizza.textContent = `Ingrese un número para comenzar la búsqueda`;
     precioPizza.textContent = "";
   }
-
 }
 
 
